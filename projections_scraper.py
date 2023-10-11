@@ -35,8 +35,8 @@ to = [data[i][15] for i in range(len(data))]
 
 data_dict = {
     'Rank': ranks,
-    'ADPs': adps,
-    'Players': players,
+    'ADP': adps,
+    'Player': players,
     'FGM': fgm,
     'FGA': fga,
     'FG%': fgp,
@@ -55,7 +55,7 @@ data_dict = {
 df = pd.DataFrame(data_dict)
 
 date = datetime.now().strftime('%Y-%m-%d')
-output_path = f'output/fantasy_basketball_projections_{date}.csv'
+output_path = f'sheets/fantasy_basketball_projections_{date}.csv'
 
 df.to_csv(output_path, index=False)
 
