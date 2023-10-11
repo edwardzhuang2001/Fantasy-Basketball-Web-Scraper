@@ -55,8 +55,9 @@ data_dict = {
 df = pd.DataFrame(data_dict)
 
 date = datetime.now().strftime('%Y-%m-%d')
-output_path = f'sheets/fantasy_basketball_projections_{date}.csv'
+# output_path = f'sheets/fantasy_basketball_projections_avgs_{date}.csv'
+output_path = f'sheets/fantasy_basketball_projections_totals_{date}.csv'
 
 df.to_csv(output_path, index=False)
 
-print('Done!')
+print(f"Data output to {output_path}.")
